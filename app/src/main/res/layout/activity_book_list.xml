@@ -6,6 +6,9 @@
     android:layout_height="match_parent"
     tools:context=".BookListActivity">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
     <TextView
         android:id="@+id/tvResponse"
         android:layout_width="wrap_content"
@@ -14,5 +17,22 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+    </ScrollView>
+    <ProgressBar
+        android:id="@+id/pb_loading"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        tools:layout_editor_absoluteX="181dp"
+        tools:layout_editor_absoluteY="326dp" />
+
+    <TextView
+        android:id="@+id/tv_error"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="Error Loading Data From the Google Books API"
+        android:visibility="invisible"
+        tools:layout_editor_absoluteX="156dp"
+        tools:layout_editor_absoluteY="485dp" />
 
 </android.support.constraint.ConstraintLayout>
